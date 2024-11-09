@@ -3,7 +3,6 @@ const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
-const { v4: uuidv4 } = require('uuid'); // Import the uuid library
 const app = express();
 const PORT = 3000;
 
@@ -42,7 +41,7 @@ app.get('/api/data', (req, res) => {
 
 // GET - Retrieve data by ID
 app.get('/api/data/:id', (req, res) => {
-    const id = req.params.id; // Use the ID as a string
+    const id = parseInt(req.params.id); // Parse ID as integer
     const data = loadData();
     const entry = data.find(item => item.id === id);
 
@@ -62,8 +61,14 @@ app.post('/api/data', (req, res) => {
     }
 
     const data = loadData();
+
+    // Ensure only numeric IDs are considered when finding the maximum ID
+    const maxId = data.reduce((max, item) => {
+        return (typeof item.id === "number" && item.id > max) ? item.id : max;
+    }, 0);
+
     const newEntry = {
-        id: uuidv4(), // Generate a unique UUID for each new entry
+        id: maxId + 1, // Assign a new unique ID by incrementing the highest numeric ID
         first_name,
         last_name,
         email_value,
@@ -78,7 +83,7 @@ app.post('/api/data', (req, res) => {
 
 // PUT - Update data by ID
 app.put('/api/data/:id', (req, res) => {
-    const id = req.params.id;
+    const id = parseInt(req.params.id); // Parse ID as integer
     const updatedData = req.body;
     console.log("Received update for ID:", id, "with data:", updatedData);
 
@@ -99,7 +104,7 @@ app.put('/api/data/:id', (req, res) => {
 
 // DELETE - Delete data by ID
 app.delete('/api/data/:id', (req, res) => {
-    const id = req.params.id;
+    const id = parseInt(req.params.id); // Parse ID as integer
     let data = loadData();
     const initialLength = data.length;
     data = data.filter(item => item.id !== id);
