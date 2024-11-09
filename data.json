@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "first_name": "Amirul ",
+    "last_name": "Aiman",
+    "email_value": "Aiman@gmail.com",
+    "Code": 200,
+    "Description": "New entry added successfully"
+  },
+  {
+    "id": 2,
+    "first_name": "Aiman",
+    "last_name": "Amirul",
+    "email_value": "Amirul@gmail.com",
+    "Code": 200,
+    "Description": "New entry added successfully"
+  },
+  {
+    "id": 3,
+    "first_name": "Siti",
+    "last_name": "Nazihah",
+    "email_value": "Nazihah@gmail.com",
+    "Code": 200,
+    "Description": "New entry added successfully"
+  },
+  {
+    "id": 4,
+    "first_name": "Nazihah",
+    "last_name": "Siti",
+    "email_value": "Siti@gmail.com",
+    "Code": 200,
+    "Description": "New entry added successfully"
+  }
+]

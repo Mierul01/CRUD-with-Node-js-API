@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../images/api.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+    <title>Search Data by ID</title>
+</head>
+<body>
+    <div class="SignUp">
+        <form id="myForm">
+            ID: <input type="text" id="idx" class="input" /><br><br>
+            <center><input type="button" id="submit" onclick="searchById()" value="Submit" /></center>
+        </form><br>
+    </div>
+
+    <!-- Loader (optional) -->
+    <div id="loading" style="display: none;">Loading...</div>
+
+    <!-- Output table -->
+    <div class="OutputSpecific">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td id="idxx"></td>
+                <td id="firstname"></td>
+                <td id="lastname"></td>
+                <td id="emailV"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="SpecificData.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/api.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+    <title>Call Data</title>
+</head>
+
+<body>
+    <!-- Loader, hidden initially -->
+    <div class="d-flex justify-content-center" style="display: none;" id="loading">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div class="Box">
+        <center><h1>Test HTML API</h1></center>
+        
+        <!-- Buttons for creating and searching data -->
+        <a href="CreateData.html" class="Insert">
+            <button type="submit" id="Insert">CREATE</button>
+        </a>
+
+        <a href="SpecificData.html" class="Search">
+            <button type="submit" id="Search">SEARCH</button>
+        </a>
+
+        <br><br>
+
+        <!-- Table for showing data -->
+        <table id="employees"></table>
+    </div>
+
+    <!-- JavaScript to fetch and display data -->
+    <script src="RetrieveData.js"></script>
+</body>
+</html>

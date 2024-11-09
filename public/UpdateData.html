@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/api.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    
+    <title>Update Data</title>
+</head>
+
+<body>
+    <div class="SignUp">
+        <form id="myForm">
+            ID: <input type="text" id="idx" class="input" readonly />
+            <br><br>
+            First Name: <input type="text" id="fName" class="input" />
+            <br><br>
+            Last Name: <input type="text" id="lName" class="input" />
+            <br><br>
+            E-mail: <input type="email" id="emailAd" class="input" />
+            <br><br>
+            <center>
+                <input type="button" id="submit" onclick="updateNew()" value="Update" />
+            </center>
+        </form>
+    </div>
+
+    <!-- Script to fetch and populate data -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+
+            if (id) {
+                document.getElementById('idx').value = id;
+
+                fetch(`http://localhost:3000/api/data/${id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data && data.Code === 200) {
+                            document.getElementById('fName').value = data.first_name;
+                            document.getElementById('lName').value = data.last_name;
+                            document.getElementById('emailAd').value = data.email_value;
+                        } else {
+                            console.error("Data not found for the given ID");
+                        }
+                    })
+                    .catch(error => console.error("Error fetching data:", error));
+            } else {
+                console.error("No ID provided in the URL");
+            }
+        });
+    </script>
+
+    <!-- Link to your update function script -->
+    <script src="UpdateData.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body{
+    background-color: cadetblue;
+    font-family: 'Bahnschrift SemiBold'; 
+}
+
+h1{
+    font-family: 'Cooper Black'; 
+}
+
+.SignUp{
+    background: #ADD8E6; 
+    width: 380px;
+    height: 100%;
+    margin: 80px auto;
+    padding: 25px;
+    padding-top: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #0C090A;
+  }
+
+.Box{
+    background: #ADD8E6; 
+    width: 800px;
+    height: 100%;
+    margin: 80px auto;
+    padding: 25px;
+    padding-top: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #0C090A;
+  }
+
+.OutputSpecific{
+    background: #ADD8E6; 
+    width: 400px;
+    height: 100%;
+    margin: 80px auto;
+    padding: 25px;
+    padding-top: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #0C090A;
+}
+
+
+.input{
+    padding: 13px 0px 15px 10px;
+    width: 100%;
+    height: 15px;  
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    outline: none; 
+    border: none;  
+    color: #555555;
+  }
+  
+#input {
+      margin-bottom: 5px;
+  }
+
+#submit:hover{  
+    background: white; 
+    color: black;  
+   }
+  
+#submit{  
+    width: 160px;  
+    height: 38px;  
+    border: none;  
+    border-radius: 10px;  
+    color: white; 
+    background: #4682B4;
+   } 
+
+table, th, td {
+    border: 2px solid black ;
+    border-collapse: collapse;
+    /* box-shadow: 1px 1px 1px 1px #A9A9A9; */
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    }
+
+tr:nth-child(even) {
+    background-color: burlywood;
+    }
+
+th {
+    background-color: cornflowerblue;
+    color: black;
+    }
+
+#Delete{ 
+    width: 60px;    
+    height: 20px;     
+    border-radius: 10px;  
+    font-size:12px;
+    color: black;
+    background-color: red;
+    } 
+
+#Delete:hover{  
+    background: lightyellow; 
+    color: black;  
+    }
+
+#Update{
+    width: 60px;      
+    height: 20px;
+    border-radius: 10px;   
+    font-size:12px;
+    color: black;
+    background-color: lightslategray;
+    
+    }
+
+#Update:hover{  
+    background: lightgoldenrodyellow; 
+    color: black;  
+    }
+
+#Insert{
+    width: 60px;    
+    height: 20px;
+    border-radius: 10px;   
+    font-size:12px;
+    color: whitesmoke;
+    background-color: black;
+    }
+
+#Insert:hover{  
+    background: gray; 
+    color: black;  
+    }
+
+#Search{
+        width: 60px;    
+        height: 20px;
+        border-radius: 10px;   
+        font-size:12px;
+        color: whitesmoke;
+        background-color: black;
+        }
+    
+#Search:hover{  
+        background: gray; 
+        color: black;  
+        }
+        
+#loading {
+            display: none; /* Hide by default */
+            text-align: center;
+            margin-top: 20px;
+        }
+        

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head> <!-- Changed header to head -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/api.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+    <title>Create Data</title>
+</head>
+
+<body>
+    <div class="SignUp">
+        <!-- Removed action attribute as JavaScript handles submission -->
+        <form id="myForm">
+            First Name: <input type="text" id="fName" class="input" required /><br><br>
+            Last Name: <input type="text" id="lName" class="input" required /><br><br>
+            E-mail: <input type="email" id="emailAd" class="input" required /><br><br>
+            <center><input type="button" id="submit" onclick="addNew()" value="Submit" /></center>
+        </form><br>
+    </div>
+
+    <script type="text/javascript" src="CreateData.js"></script>
+
+    <!-- Loader hidden initially -->
+    <div class="d-flex justify-content-center" style="display: none;" id="loading">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</body>
+</html>
